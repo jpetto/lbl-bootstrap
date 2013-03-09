@@ -1,0 +1,55 @@
+/*!
+ * Responsive design media query indicator styles
+ */
+
+#mobileDebugger {
+  width: 100%;
+  text-align: center;
+}
+
+#mobileDebugger div {
+  width: 100%;
+  height: 25px;
+  font: normal 13px/2em "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  color: #fff;
+}
+
+#debugPhonePortrait {
+  background-color: #5cb85c;
+  display: none;
+}
+
+#debugPhoneLandscape{
+  background-color: #f2a130;
+  display: none;
+}
+
+#debugTabletPortrait {
+  background-color: #d9534f;
+  display: none;
+}
+
+#debugDesktop {
+  background-color: #428bca;
+  display: none;
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 320px) {
+	#debugPhonePortrait { display: inline-block; }
+}
+
+/* Mobile Portrait to Mobile Landscape */
+@media only screen and (min-width: 321px) and (max-width: 568px) {
+	#debugPhoneLandscape { display: inline-block; }
+}
+
+/* Tablet Portrait to Tablet Landscape */
+@media only screen and (min-width: 569px) and (max-width: 978px) {
+	#debugTabletPortrait { display: inline-block; }
+}
+
+/* Tablet Landscape and Desktop */
+@media only screen and (min-width: 979px) {
+	#debugDesktop { display: inline-block; }
+}

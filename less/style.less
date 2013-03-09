@@ -1,0 +1,133 @@
+/*!
+ * All styles are mobile first!
+ */
+
+/* Normalize and preboot
+------------------------------------------------------------------------------ */
+
+@import "normalize.less";
+@import "preboot.less";
+
+
+/* Color palette
+------------------------------------------------------------------------------ */
+
+@red-bright: #ff3333;
+
+
+/* Typography and formatting
+------------------------------------------------------------------------------ */
+
+h1 {
+	font-size: @font-size-base * 3.25;
+	line-height: @font-size-base * 3.5;
+	margin-bottom: @font-size-base;
+}
+
+h2 {
+	font-size: @font-size-base * 2.5;
+	line-height: @font-size-base * 2.75;
+	margin-bottom: @font-size-base / 1.5;
+}
+
+h3 {
+	font-size: @font-size-base * 2;
+	line-height: @font-size-base * 2.25;
+	margin-bottom: @font-size-base / 2;
+}
+
+a { color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+a:focus, input:focus, button:focus {
+	outline: none;
+}
+
+p { margin: 0 0 20px 0; }
+p img { margin: 0; }
+
+ul, ol {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+
+li {
+	line-height: @line-height-base;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* Layout
+------------------------------------------------------------------------------ */
+
+body {
+	background: @body-background;
+	font-family: @font-family-serif;
+	font-size: @font-size-base;
+	font-weight: normal;
+	line-height: @line-height-base;
+	color: @text-color;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapper {
+	padding: 0 15px 0 15px;
+}
+
+.columns-container {
+	.make-row();
+}
+
+.columns-container section {
+	.make-column(4);
+}
+
+/* Navigation
+---------------------------------- */
+
+nav ul {
+	display: none;
+	.clearfix();
+}
+
+nav li {
+	float: left;
+	padding-right: 20px;
+}
+
+.tinynav { display: block; }
+
+
+/* Utilities
+------------------------------------------------------------------------------ */
+
+.hide { display: none; }
+.unhide { display: inline-block; }
+.invisible { visibility: hidden; }
+.visible { visibility: visible; }
+
+
+/* Media queries and print styles
+------------------------------------------------------------------------------ */
+
+@import "media-queries.less";
+@import "print.less";
