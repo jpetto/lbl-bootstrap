@@ -1,8 +1,6 @@
-$(document).ready(function() {
+;(function(w, $) {
+  'use strict';
 
-	// Build mobile navigation
-  $(function () {
-    $("nav ul").tinyNav();
-  });
-
-});
+  // Build mobile navigation
+  $("nav ul").tinyNav();
+}(window, window.jQuery));
